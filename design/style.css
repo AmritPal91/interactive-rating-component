@@ -111,7 +111,7 @@ color: var(--White);
    height: 14vh;
  }
  /*** Mobile view ***/
-@media screen and (max-width:400px) {
+@media screen and (min-width:375px) {
  *{  box-sizing: border-box;}
  .outer-div{
   height: 667px;
@@ -119,7 +119,7 @@ color: var(--White);
   }
  .inner-div{
   width: 305px;
-  height: 310px;
+  height: 350px;
   }
 
  .submit-btn{
