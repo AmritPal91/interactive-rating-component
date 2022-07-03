@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="design/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: absolute;
+      bottom: 20px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="outer-div">
+    <!-- Rating state start -->
+    <div id="ratingDiv" class="inner-div" style="display:block;">
+
+      <img class="star-bg" src="images/icon-star.svg" alt="star-pic">
+
+      <h2>How did we do?</h2>
+      <p class="paragraph">Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+      <div class="rating"><span id="1" class="rating-one">1</span>&nbsp<span id="2" class="rating-bg">2</span>&nbsp<span id="3" class="rating-bg">3</span>&nbsp<span id="4" class="rating-bg">4</span>&nbsp<span id="5" class="rating-bg">5</span></div>
+
+      <button onclick="dispThankyou()" class="submit-btn" type="button" name="sub-btn">SUBMIT</button>
+    </div>
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div id="thanksDiv" class="inner-div thanks-div" style="display:none;">
+      <img class="thank-img" src="images/illustration-thank-you.svg" alt="thank you pic">
+      <p class="rating-result">You selected <span id="ratingVal"><!-- Add rating here --></span> out of &nbsp5</p>
+      <h2>Thank you!</h2>
+      <p class="paragraph">We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </div>
+    <!-- Thank you state end -->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Amritpal Singh</a>.
+    </div>
+  </div>
+  <script type="text/javascript">
+    let changeVar1 = document.getElementById('1');
+    let changeVar2 = document.getElementById('2');
+    let changeVar3 = document.getElementById('3');
+    let changeVar4 = document.getElementById('4');
+    let changeVar5 = document.getElementById('5');
+
+    let dispVal = document.getElementById('ratingVal');
+    const clrChange1 = () => {
+      changeVar1.style.backgroundColor = "hsl(25, 97%, 53%)";
+      dispVal.innerHTML = 1;
+    }
+    const clrChange2 = () => {
+      changeVar1.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar2.style.backgroundColor = "hsl(25, 97%, 53%)";
+      dispVal.innerHTML = 2;
+    }
+    const clrChange3 = () => {
+      changeVar1.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar2.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar3.style.backgroundColor = "hsl(25, 97%, 53%)";
+      dispVal.innerHTML = 3;
+    }
+    const clrChange4 = () => {
+      changeVar1.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar2.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar3.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar4.style.backgroundColor = "hsl(25, 97%, 53%)";
+      dispVal.innerHTML = 4;
+    }
+    const clrChange5 = () => {
+      changeVar1.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar2.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar3.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar4.style.backgroundColor = "hsl(25, 97%, 53%)";
+      changeVar5.style.backgroundColor = "hsl(25, 97%, 53%)";
+      dispVal.innerHTML = 5;
+    }
+    changeVar1.addEventListener('click', clrChange1);
+    changeVar2.addEventListener('click', clrChange2);
+    changeVar3.addEventListener('click', clrChange3);
+    changeVar4.addEventListener('click', clrChange4);
+    changeVar5.addEventListener('click', clrChange5);
+
+    //Display Thankyou Content
+    let dispThankyou = () => {
+      let d1 = document.getElementById('thanksDiv');
+      let d2 = document.getElementById('ratingDiv');
+      if (d1.style.display == "none")
+        d1.style.display = "block";
+      d2.style.display = "none";
+    }
+    //let value = changeVar1.value="1";
+    //let dispVal = () => document.getElementById('ratingVal').innerHTML=value;
+  </script>
+</body>
+
+</html>
