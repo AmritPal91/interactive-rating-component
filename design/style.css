@@ -111,7 +111,7 @@ color: var(--White);
    height: 14vh;
  }
  /*** Mobile view ***/
- @media screen and (min-width:375px) and (max-width:400px) {
+ @media screen and (min-width:360px) and (max-width:400px) {
   *{  box-sizing: border-box;}
   .outer-div{
    height: 100vh;
