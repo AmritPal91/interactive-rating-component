@@ -72,8 +72,8 @@ img{
 
 }
 .inner-div{
-  height: 43vh;
-  width: 24vw;
+  height: 343px;
+  width: 345px;
   background-color: var(--Dark-Blue);
   border-radius: 25px;
 }
@@ -154,3 +154,14 @@ color: var(--White);
   .rating-bg{
   margin-left: 2.7vw;
  }
+ /*** Laptop view ***/
+ @media screen and (min-width:1349px) {
+  *{  box-sizing: border-box;}
+  .outer-div{
+   height: 100vh;
+   width: 100vw;
+   }
+  .inner-div{
+   width: 320px;
+   height: 349px;
+   } 
