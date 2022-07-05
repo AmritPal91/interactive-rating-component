@@ -69,7 +69,7 @@ img{
   place-items: center;
   background-color: var(--Very-DarkBlue);
   height: 100vh;
-
+  width: 100vw;
 }
 .inner-div{
   height: 343px;
