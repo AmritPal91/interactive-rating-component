@@ -65,8 +65,9 @@ img{
     line-height: 1.5;
 }
 .outer-div{
-  display: grid;
-  place-items: center;
+   display: flex;
+  justify-content: center;
+ align-items:center;
   background-color: var(--Very-DarkBlue);
   height: 100vh;
   width: 100vw;
